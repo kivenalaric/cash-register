@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>The Cash Register</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>NavBarRight</div>
+        <div>NavBarLeft</div>
+      </nav>
+    </header>
+    <section id="main">
+      <div class="main-inner">
+        <h1>The Cash Register</h1>
+        <p>
+          Enter the bill amount and cash given by the customer and know the
+          minimum number of notes to return
+        </p>
+        <form action="" onsubmit="checkCashRegister()" id="submission-form">
+          <label for="bill">Bill Amount</label>
+          <input
+            type="text"
+            pattern="^\d+(?:\.\d{1,2})?$"
+            id="bill"
+            name="bill"
+            required
+            class="bill"
+          />
+          <label for="cash">Cash Amount</label>
+          <input
+            type="text"
+            pattern="^\d+(?:\.\d{1,2})?$"
+            id="cash"
+            name="cash"
+            class="cash"
+            required
+          />
+          <br />
+          <div id="drawer">
+            <h2>Avalable</h2>
+            <div class="drawer">
+              <div class="currency-holder">
+                <label for="penny">PENNY</label>
+                <input type="text" class="penny" id="penny" />
+              </div>
+              <div class="currency-holder">
+                <label for="nickel">Nickel</label>
+                <input type="text" class="nickel" id="nickel" />
+              </div>
+              <div class="currency-holder">
+                <label for="dime">Dime</label>
+                <input type="text" class="dime" id="dime" />
+              </div>
+              <div class="currency-holder">
+                <label for="quarter">QUARTER</label>
+                <input type="text" class="quarter" id="quarter" />
+              </div>
+              <div class="currency-holder">
+                <label for="one">One</label>
+                <input type="text" class="one" id="one" />
+              </div>
+              <div class="currency-holder">
+                <label for="five">Five</label>
+                <input type="text" class="five" id="five" />
+              </div>
+              <div class="currency-holder">
+                <label for="ten">Ten</label>
+                <input type="text" class="ten" id="ten" />
+              </div>
+              <div class="currency-holder">
+                <label for="twenty">Twenty</label>
+                <input type="text" class="twenty" id="twenty" />
+              </div>
+              <div class="currency-holder">
+                <label for="one-hundred">One Hundred</label>
+                <input type="text" class="one-hundred" id="one-hundred" />
+              </div>
+            </div>
+          </div>
+          <button type="submit" id="submit-btn" class="submit-btn">
+            Return Change
+          </button>
+        </form>
+        <div class="results-div" id="results-div">
+          <p>The results are: <span id="results"></span></p>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="assets/scripts/script.js"></script>
+  </body>
 </html>
