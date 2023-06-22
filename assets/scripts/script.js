@@ -1,6 +1,5 @@
 const purchase = document.getElementById('bill')
 const payment = document.getElementById('cash')
-const submitBtn = document.getElementById('submit-btn')
 const displayResult = document.getElementById('results')
 const form = document.getElementById('submission-form')
 
@@ -103,6 +102,7 @@ function checkCashRegister () {
         if (cashToGive[moneyType] > 0) {
           changeArray.push([moneyType, cashToGive[moneyType] / 100])
         }
+        return
       })
       return { status: 'OPEN', change: changeArray }
     }
