@@ -102,7 +102,7 @@ function checkCashRegister () {
         if (cashToGive[moneyType] > 0) {
           changeArray.push([moneyType, cashToGive[moneyType] / 100])
         }
-        return
+        return moneyType
       })
       return { status: 'OPEN', change: changeArray }
     }
